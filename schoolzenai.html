@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCHOOL ZEN AI - Pitch Deck</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .slide {
+            width: 1280px;
+            height: 720px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+            background: #0f172a;
+        }
+
+        /* ============ SLIDE 1: TITLE ============ */
+        .slide-1 {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-1 .bg-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
+        }
+
+        .slide-1 .grid-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .slide-1 .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .slide-1 .badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .slide-1 h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slide-1 h1 span {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slide-1 .subtitle {
+            font-size: 22px;
+            color: #94a3b8;
+            font-weight: 400;
+            margin-top: 16px;
+            margin-bottom: 40px;
+        }
+
+        .slide-1 .tech-tags {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .slide-1 .tech-tag {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        .slide-1 .decorative-line {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            border-radius: 2px;
+            margin: 0 auto 30px;
+        }
+
+        /* ============ SLIDE 2: PROBLEM ============ */
+        .slide-2 {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 60px 80px;
+        }
+
+        .slide-header {
+            margin-bottom: 40px;
+        }
+
+        .slide-header .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #3b82f6;
+            margin-bottom: 12px;
+        }
+
+        .slide-header h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: #f1f5f9;
+            line-height: 1.2;
+        }
+
+        .slide-header h2 span {
+            color: #f87171;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 0;
+            align-items: start;
+        }
+
+        .problem-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            background: rgba(239, 68, 68, 0.06);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            border-radius: 12px;
+        }
+
+        .problem-item .icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(239, 68, 68, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .problem-item h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #fca5a5;
+            margin-bottom: 4px;
+        }
+
+        .problem-item p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .vs-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .vs-divider .line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.15), transparent);
+        }
+
+        .vs-divider .vs {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            margin: 12px 0;
+        }
+
+        .solution-col {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .solution-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            border-radius: 12px;
+        }
+
+        .solution-item .icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .solution-item h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #6ee7b7;
+            margin-bottom: 4px;
+        }
+
+        .solution-item p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .col-header {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding-bottom: 8px;
+            margin-bottom: 4px;
+        }
+
+        .col-header.problem {
+            color: #f87171;
+            border-bottom: 2px solid rgba(248, 113, 113, 0.3);
+        }
+
+        .col-header.solution {
+            color: #34d399;
+            border-bottom: 2px solid rgba(52, 211, 153, 0.3);
+        }
+
+        /* ============ SLIDE 3: MAIN DASHBOARD ============ */
+        .slide-3 {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .slide-3 .slide-header h2 span {
+            color: #60a5fa;
+        }
+
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .module-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 28px 24px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .module-card.blue::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .module-card.green::before { background: linear-gradient(90deg, #10b981, #34d399); }
+        .module-card.orange::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .module-card.purple::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .module-card.red::before { background: linear-gradient(90deg, #ef4444, #f87171); }
+        .module-card.slate::before { background: linear-gradient(90deg, #64748b, #94a3b8); }
+
+        .module-card .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .module-card.blue .card-icon { background: rgba(59, 130, 246, 0.15); }
+        .module-card.green .card-icon { background: rgba(16, 185, 129, 0.15); }
+        .module-card.orange .card-icon { background: rgba(245, 158, 11, 0.15); }
+        .module-card.purple .card-icon { background: rgba(139, 92, 246, 0.15); }
+        .module-card.red .card-icon { background: rgba(239, 68, 68, 0.15); }
+        .module-card.slate .card-icon { background: rgba(100, 116, 139, 0.15); }
+
+        .module-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .module-card p {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .module-card .features {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .module-card .feature-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .module-card.blue .feature-tag { background: rgba(59, 130, 246, 0.1); color: #93bbfd; }
+        .module-card.green .feature-tag { background: rgba(16, 185, 129, 0.1); color: #6ee7b7; }
+        .module-card.orange .feature-tag { background: rgba(245, 158, 11, 0.1); color: #fcd34d; }
+        .module-card.purple .feature-tag { background: rgba(139, 92, 246, 0.1); color: #c4b5fd; }
+        .module-card.red .feature-tag { background: rgba(239, 68, 68, 0.1); color: #fca5a5; }
+        .module-card.slate .feature-tag { background: rgba(100, 116, 139, 0.1); color: #cbd5e1; }
+
+        /* ============ SLIDE 4-7: MODULE DEEP DIVE ============ */
+        .slide-detail {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .detail-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            height: calc(100% - 90px);
+        }
+
+        .detail-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .detail-left .module-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+
+        .detail-left h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: #f1f5f9;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .detail-left .description {
+            font-size: 16px;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            color: #cbd5e1;
+        }
+
+        .feature-list-item .check {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .detail-right {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 22px 26px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .stat-card .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .stat-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+
+        .stat-card p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+
+        /* Color variants for detail slides */
+        .theme-green .module-badge { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .theme-green .check { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .theme-green .stat-icon { background: rgba(16, 185, 129, 0.1); }
+        .theme-green h2 span { color: #34d399; }
+
+        .theme-orange .module-badge { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+        .theme-orange .check { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+        .theme-orange .stat-icon { background: rgba(245, 158, 11, 0.1); }
+        .theme-orange h2 span { color: #fbbf24; }
+
+        .theme-purple .module-badge { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+        .theme-purple .check { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+        .theme-purple .stat-icon { background: rgba(139, 92, 246, 0.1); }
+        .theme-purple h2 span { color: #a78bfa; }
+
+        .theme-red .module-badge { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+        .theme-red .check { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+        .theme-red .stat-icon { background: rgba(239, 68, 68, 0.1); }
+        .theme-red h2 span { color: #f87171; }
+
+        .theme-blue .module-badge { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+        .theme-blue .check { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+        .theme-blue .stat-icon { background: rgba(59, 130, 246, 0.1); }
+        .theme-blue h2 span { color: #60a5fa; }
+
+        /* ============ SLIDE 8: ARCHITECTURE ============ */
+        .slide-arch {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .arch-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .arch-layer {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px 30px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .arch-layer .layer-title {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .arch-layer .layer-content {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .arch-chip {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 12.5px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .layer-frontend { border-left: 4px solid #3b82f6; }
+        .layer-frontend .layer-title { color: #60a5fa; }
+        .layer-frontend .arch-chip { background: rgba(59, 130, 246, 0.1); color: #93bbfd; }
+
+        .layer-state { border-left: 4px solid #8b5cf6; }
+        .layer-state .layer-title { color: #a78bfa; }
+        .layer-state .arch-chip { background: rgba(139, 92, 246, 0.1); color: #c4b5fd; }
+
+        .layer-api { border-left: 4px solid #f59e0b; }
+        .layer-api .layer-title { color: #fbbf24; }
+        .layer-api .arch-chip { background: rgba(245, 158, 11, 0.1); color: #fcd34d; }
+
+        .layer-backend { border-left: 4px solid #10b981; }
+        .layer-backend .layer-title { color: #34d399; }
+        .layer-backend .arch-chip { background: rgba(16, 185, 129, 0.1); color: #6ee7b7; }
+
+        .arch-arrow {
+            text-align: center;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 8px;
+        }
+
+        /* ============ SLIDE 9: SMART FEATURES ============ */
+        .slide-features {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 26px 22px;
+            text-align: center;
+        }
+
+        .feature-card .f-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 16px;
+        }
+
+        .feature-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 12.5px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .fc-blue .f-icon { background: rgba(59,130,246,0.12); }
+        .fc-green .f-icon { background: rgba(16,185,129,0.12); }
+        .fc-purple .f-icon { background: rgba(139,92,246,0.12); }
+        .fc-orange .f-icon { background: rgba(245,158,11,0.12); }
+        .fc-red .f-icon { background: rgba(239,68,68,0.12); }
+        .fc-cyan .f-icon { background: rgba(6,182,212,0.12); }
+
+        /* ============ SLIDE 10: COMPETITIVE ============ */
+        .slide-compare {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .compare-table thead th {
+            padding: 18px 24px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .compare-table thead th:first-child {
+            background: rgba(255,255,255,0.05);
+            color: #94a3b8;
+        }
+
+        .compare-table thead th:nth-child(2) {
+            background: rgba(239,68,68,0.08);
+            color: #fca5a5;
+        }
+
+        .compare-table thead th:nth-child(3) {
+            background: rgba(16,185,129,0.08);
+            color: #6ee7b7;
+        }
+
+        .compare-table tbody td {
+            padding: 14px 24px;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .compare-table tbody td:first-child {
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        .compare-table tbody td:nth-child(2) {
+            color: #94a3b8;
+        }
+
+        .compare-table tbody td:nth-child(3) {
+            color: #6ee7b7;
+            font-weight: 600;
+        }
+
+        .compare-table tbody tr {
+            background: rgba(255,255,255,0.01);
+        }
+
+        .compare-table tbody tr:hover {
+            background: rgba(255,255,255,0.03);
+        }
+
+        /* ============ SLIDE 11: BENEFITS ============ */
+        .slide-benefits {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 28px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .benefit-card .b-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            font-size: 13.5px;
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        .benefit-card .benefit-features {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .benefit-card .bf-tag {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            background: rgba(255,255,255,0.05);
+            color: #cbd5e1;
+        }
+
+        /* ============ SLIDE 12: ROADMAP ============ */
+        .slide-roadmap {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 50px 70px;
+        }
+
+        .roadmap-timeline {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .roadmap-phase {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 28px 22px;
+            position: relative;
+        }
+
+        .roadmap-phase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .phase-1::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .phase-2::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .phase-3::before { background: linear-gradient(90deg, #10b981, #34d399); }
+        .phase-4::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+
+        .roadmap-phase .phase-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .phase-1 .phase-label { color: #60a5fa; }
+        .phase-2 .phase-label { color: #a78bfa; }
+        .phase-3 .phase-label { color: #34d399; }
+        .phase-4 .phase-label { color: #fbbf24; }
+
+        .roadmap-phase h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #f1f5f9;
+            margin-bottom: 14px;
+        }
+
+        .roadmap-phase ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .roadmap-phase li {
+            font-size: 12.5px;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .roadmap-phase li::before {
+            content: '→';
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .phase-1 li::before { color: #60a5fa; }
+        .phase-2 li::before { color: #a78bfa; }
+        .phase-3 li::before { color: #34d399; }
+        .phase-4 li::before { color: #fbbf24; }
+
+        /* ============ SLIDE 13: CTA / CLOSING ============ */
+        .slide-cta {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .slide-cta .bg-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 70% 30%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
+        }
+
+        .slide-cta .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .slide-cta h2 {
+            font-size: 48px;
+            font-weight: 900;
+            color: #f1f5f9;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .slide-cta h2 span {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .slide-cta .tagline {
+            font-size: 20px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        .cta-features {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            font-size: 14px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        .cta-feature .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #34d399;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 16px 48px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        /* Page numbers */
+        .page-num {
+            position: absolute;
+            bottom: 24px;
+            right: 32px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.2);
+            font-weight: 600;
+        }
+
+        .slide-logo {
+            position: absolute;
+            bottom: 24px;
+            left: 32px;
+            font-size: 12px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.15);
+            letter-spacing: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; }
+            .slide {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== SLIDE 1: TITLE ==================== -->
+    <div class="slide slide-1">
+        <div class="bg-pattern"></div>
+        <div class="grid-lines"></div>
+        <div class="content">
+            <div class="badge">🎓 School Management Reimagined</div>
+            <div class="decorative-line"></div>
+            <h1>Smart School <span>ERP</span></h1>
+            <h1>Management System</h1>
+            <p class="subtitle">A Complete, Modern & Intelligent Platform to Manage<br>Every Aspect of School Operations — From One Dashboard</p>
+            <div class="tech-tags">
+                <span class="tech-tag">⚛️ React 19</span>
+                <span class="tech-tag">🎨 Material-UI</span>
+                <span class="tech-tag">⚡ Vite</span>
+                <span class="tech-tag">💨 Tailwind CSS</span>
+                <span class="tech-tag">📊 Recharts</span>
+                <span class="tech-tag">🎭 Framer Motion</span>
+            </div>
+        </div>
+        <span class="page-num">01 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 2: PROBLEM vs SOLUTION ==================== -->
+    <div class="slide slide-2">
+        <div class="slide-header">
+            <div class="eyebrow">The Challenge</div>
+            <h2>Why Schools <span>Need</span> This System</h2>
+        </div>
+        <div class="problem-grid">
+            <div class="problem-col">
+                <div class="col-header problem">❌ Traditional Approach</div>
+                <div class="problem-item">
+                    <div class="icon">📝</div>
+                    <div>
+                        <h4>Paper-Based Records</h4>
+                        <p>Fee receipts, attendance registers, and exam records maintained on paper — easily lost, damaged, or mismanaged.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="icon">⏱️</div>
+                    <div>
+                        <h4>Time-Consuming Processes</h4>
+                        <p>Manual calculations for results, fee dues, and attendance percentages take hours of staff time daily.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="icon">🔍</div>
+                    <div>
+                        <h4>No Real-Time Visibility</h4>
+                        <p>Principals and administrators have zero real-time insight into collections, attendance trends, or academic performance.</p>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="icon">🗂️</div>
+                    <div>
+                        <h4>Multiple Disconnected Tools</h4>
+                        <p>Different software for fees, another for attendance, spreadsheets for exams — nothing talks to each other.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vs-divider">
+                <div class="line"></div>
+                <div class="vs">VS</div>
+                <div class="line"></div>
+            </div>
+            <div class="solution-col">
+                <div class="col-header solution">✅ Our Smart ERP Solution</div>
+                <div class="solution-item">
+                    <div class="icon">💾</div>
+                    <div>
+                        <h4>100% Digital Records</h4>
+                        <p>Every fee receipt, attendance entry, and exam record stored digitally with instant search and retrieval.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <div class="icon">⚡</div>
+                    <div>
+                        <h4>Automated Calculations</h4>
+                        <p>Results, percentages, ranks, fee dues — everything auto-calculated in real-time, zero manual effort.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <div class="icon">📊</div>
+                    <div>
+                        <h4>Live Dashboard Analytics</h4>
+                        <p>Real-time charts, graphs, and KPIs showing collections, attendance, and academic data at a glance.</p>
+                    </div>
+                </div>
+                <div class="solution-item">
+                    <div class="icon">🔗</div>
+                    <div>
+                        <h4>One Unified Platform</h4>
+                        <p>Fees, attendance, exams, reports, configuration — all modules interconnected under a single dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">02 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 3: MAIN DASHBOARD ==================== -->
+    <div class="slide slide-3">
+        <div class="slide-header">
+            <div class="eyebrow">Central Command Center</div>
+            <h2>The <span>Main Dashboard</span> — Everything at a Glance</h2>
+        </div>
+        <div class="module-grid">
+            <div class="module-card blue">
+                <div class="card-icon">🏫</div>
+                <h3>Admin Dashboard</h3>
+                <p>Complete school administration hub for managing students, staff, classes, sections, and school-wide configurations.</p>
+                <div class="features">
+                    <span class="feature-tag">Student Mgmt</span>
+                    <span class="feature-tag">Staff Records</span>
+                    <span class="feature-tag">Classes</span>
+                </div>
+            </div>
+            <div class="module-card green">
+                <div class="card-icon">💰</div>
+                <h3>Collection Dashboard</h3>
+                <p>Real-time fee collection tracking, dues management, payment history, and daily/monthly financial summaries.</p>
+                <div class="features">
+                    <span class="feature-tag">Fee Collection</span>
+                    <span class="feature-tag">Dues Tracking</span>
+                    <span class="feature-tag">Receipts</span>
+                </div>
+            </div>
+            <div class="module-card orange">
+                <div class="card-icon">📋</div>
+                <h3>Attendance Dashboard</h3>
+                <p>Digital attendance marking system with class-wise tracking, absentee reports, and automatic percentage calculations.</p>
+                <div class="features">
+                    <span class="feature-tag">Daily Marking</span>
+                    <span class="feature-tag">Auto %</span>
+                    <span class="feature-tag">Reports</span>
+                </div>
+            </div>
+            <div class="module-card purple">
+                <div class="card-icon">📝</div>
+                <h3>Exam Dashboard</h3>
+                <p>End-to-end exam management — from exam creation, mark entry, result generation to printable report cards.</p>
+                <div class="features">
+                    <span class="feature-tag">Create Exams</span>
+                    <span class="feature-tag">Mark Entry</span>
+                    <span class="feature-tag">Grades</span>
+                </div>
+            </div>
+            <div class="module-card red">
+                <div class="card-icon">📊</div>
+                <h3>Report Dashboard</h3>
+                <p>Comprehensive reporting engine with student, financial, and attendance reports with advanced filtering options.</p>
+                <div class="features">
+                    <span class="feature-tag">Analytics</span>
+                    <span class="feature-tag">Custom Filters</span>
+                    <span class="feature-tag">Export</span>
+                </div>
+            </div>
+            <div class="module-card slate">
+                <div class="card-icon">⚙️</div>
+                <h3>Master Configuration</h3>
+                <p>One-time setup module for classes, sections, fee heads, academic sessions, and all foundational school data.</p>
+                <div class="features">
+                    <span class="feature-tag">Class Master</span>
+                    <span class="feature-tag">Fee Heads</span>
+                    <span class="feature-tag">Sessions</span>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">03 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 4: COLLECTION MODULE ==================== -->
+    <div class="slide slide-detail theme-green">
+        <div class="slide-header">
+            <div class="eyebrow">Module Deep Dive</div>
+        </div>
+        <div class="detail-layout">
+            <div class="detail-left">
+                <div class="module-badge">💰 FINANCE MODULE</div>
+                <h2><span>Collection</span> Dashboard</h2>
+                <p class="description">Complete financial management system that handles fee collection, tracks pending dues, generates receipts, and provides detailed financial analytics — all in real-time.</p>
+                <div class="feature-list">
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Real-time fee collection with instant receipt generation</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Automatic dues calculation and pending fee tracking</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Class-wise fee structure configuration</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Daily, monthly, and yearly collection reports</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Printable professional fee receipts with school branding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-right">
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #34d399;">💵</div>
+                    <div>
+                        <h4>Fee Collection</h4>
+                        <p>Accept payments by class, student, or fee head. Instant digital receipt generation with print support.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #fbbf24;">📋</div>
+                    <div>
+                        <h4>Dues Management</h4>
+                        <p>Auto-track pending fees by student. Filter by class, date range, or fee category. Never miss a due payment.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #60a5fa;">📊</div>
+                    <div>
+                        <h4>Financial Reports</h4>
+                        <p>Visual daily/monthly collection summaries with charts. Export-ready reports for audit and compliance.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #f87171;">🖨️</div>
+                    <div>
+                        <h4>Receipt Printing</h4>
+                        <p>Professional themed receipts with React-to-Print integration. School logo, colors, and branding included.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">04 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 5: ATTENDANCE MODULE ==================== -->
+    <div class="slide slide-detail theme-orange">
+        <div class="slide-header">
+            <div class="eyebrow">Module Deep Dive</div>
+        </div>
+        <div class="detail-layout">
+            <div class="detail-left">
+                <div class="module-badge">📋 ATTENDANCE MODULE</div>
+                <h2><span>Attendance</span> Dashboard</h2>
+                <p class="description">Smart digital attendance system replacing paper registers. Class-wise marking, automatic percentage computation, absentee notifications, and comprehensive attendance analytics.</p>
+                <div class="feature-list">
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>One-click daily attendance marking by class & section</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Automatic attendance percentage calculation</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Monthly and yearly attendance trend reports</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Instant absentee list generation</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Student-wise attendance history tracking</span>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-right">
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #fbbf24;">✅</div>
+                    <div>
+                        <h4>Daily Attendance</h4>
+                        <p>Select class & section, mark Present/Absent for all students in one screen. Save with single click.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #34d399;">📈</div>
+                    <div>
+                        <h4>Attendance Analytics</h4>
+                        <p>Visual graphs showing attendance trends. Identify low-attendance students and patterns instantly.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #f87171;">🚨</div>
+                    <div>
+                        <h4>Absentee Tracking</h4>
+                        <p>Auto-generated absentee list per day. Filter by class, date range. Ready for parent communication.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #a78bfa;">📄</div>
+                    <div>
+                        <h4>Printable Reports</h4>
+                        <p>Monthly attendance registers, individual student reports, and class-wise summaries — all print-ready.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">05 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 6: EXAM MODULE ==================== -->
+    <div class="slide slide-detail theme-purple">
+        <div class="slide-header">
+            <div class="eyebrow">Module Deep Dive</div>
+        </div>
+        <div class="detail-layout">
+            <div class="detail-left">
+                <div class="module-badge">📝 EXAM MODULE</div>
+                <h2><span>Exam</span> Dashboard</h2>
+                <p class="description">End-to-end examination management system. Create exams, define subjects, enter marks, auto-compute results with ranks and grades, and generate professional printable report cards.</p>
+                <div class="feature-list">
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Define exams with subjects, max marks, and passing criteria</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Subject-wise mark entry with bulk input support</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Auto-calculated grades, percentages, and class ranks</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Professional report card generation with school branding</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Comparative analysis across exams and subjects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-right">
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #a78bfa;">📋</div>
+                    <div>
+                        <h4>Exam Creation</h4>
+                        <p>Configure exam type, subjects, maximum marks, and passing marks. Supports multiple exam patterns per session.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #60a5fa;">✍️</div>
+                    <div>
+                        <h4>Mark Entry</h4>
+                        <p>Class-wise subject mark entry with validation. Ensures data accuracy with min/max constraints.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #34d399;">🏆</div>
+                    <div>
+                        <h4>Result Generation</h4>
+                        <p>One-click result computation — total, percentage, grade, rank, pass/fail status. All automated.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #fbbf24;">🖨️</div>
+                    <div>
+                        <h4>Report Cards</h4>
+                        <p>Beautifully formatted, theme-aware printable report cards with school logo and custom color scheme.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">06 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 7: REPORTS & ADMIN MODULE ==================== -->
+    <div class="slide slide-detail theme-red">
+        <div class="slide-header">
+            <div class="eyebrow">Module Deep Dive</div>
+        </div>
+        <div class="detail-layout">
+            <div class="detail-left">
+                <div class="module-badge">📊 REPORTS & ADMIN</div>
+                <h2><span>Reports</span> & Administration</h2>
+                <p class="description">Powerful reporting engine combined with comprehensive admin controls. Generate any report with advanced filters, manage master data, and configure the entire school setup from one place.</p>
+                <div class="feature-list">
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Student-wise, class-wise, and date-wise report generation</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Financial collection and dues summary reports</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Interactive charts and data visualization with Recharts</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>Master data management: Classes, Sections, Fee Heads, Sessions</span>
+                    </div>
+                    <div class="feature-list-item">
+                        <div class="check">✓</div>
+                        <span>School branding and theme customization</span>
+                    </div>
+                </div>
+            </div>
+            <div class="detail-right">
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #f87171;">📈</div>
+                    <div>
+                        <h4>Student Reports</h4>
+                        <p>Individual student history — academic, attendance, fees — all consolidated in one comprehensive report.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #34d399;">💹</div>
+                    <div>
+                        <h4>Financial Analytics</h4>
+                        <p>Daily, monthly income trends. Outstanding dues analysis. Revenue forecasting with visual dashboards.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #a78bfa;">🔧</div>
+                    <div>
+                        <h4>Master Configuration</h4>
+                        <p>One-time setup for Class Master, Section Master, Fee Head Master, and Academic Session — foundation for all modules.</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="color: #fbbf24;">🎨</div>
+                    <div>
+                        <h4>Theme & Branding</h4>
+                        <p>Dynamic school colors, dark/light mode, custom fonts, print-specific themes — fully white-labeled per school.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">07 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 8: ARCHITECTURE ==================== -->
+    <div class="slide slide-arch">
+        <div class="slide-header">
+            <div class="eyebrow">Technical Foundation</div>
+            <h2 style="color: #f1f5f9;">System <span style="color: #60a5fa;">Architecture</span></h2>
+        </div>
+        <div class="arch-diagram">
+            <div class="arch-layer layer-frontend">
+                <div>
+                    <div class="layer-title">Presentation Layer</div>
+                    <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Modern UI Framework</div>
+                </div>
+                <div class="layer-content">
+                    <span class="arch-chip">⚛️ React 19</span>
+                    <span class="arch-chip">⚡ Vite Build Tool</span>
+                    <span class="arch-chip">🎨 Material-UI v6</span>
+                    <span class="arch-chip">💨 Tailwind CSS</span>
+                    <span class="arch-chip">🎭 Framer Motion</span>
+                    <span class="arch-chip">📊 Recharts</span>
+                </div>
+            </div>
+            <div class="arch-arrow">▼ ▼ ▼</div>
+            <div class="arch-layer layer-state">
+                <div>
+                    <div class="layer-title">State & Context</div>
+                    <div style="font-size: 12px; color: #64748b; margin-top: 4px;">App State Management</div>
+                </div>
+                <div class="layer-content">
+                    <span class="arch-chip">🔐 AuthContext</span>
+                    <span class="arch-chip">🎨 ThemeContext</span>
+                    <span class="arch-chip">🛡️ Protected Routes</span>
+                    <span class="arch-chip">📌 Session Storage</span>
+                    <span class="arch-chip">🔗 History Router</span>
+                </div>
+            </div>
+            <div class="arch-arrow">▼ ▼ ▼</div>
+            <div class="arch-layer layer-api">
+                <div>
+                    <div class="layer-title">API Layer</div>
+                    <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Communication Hub</div>
+                </div>
+                <div class="layer-content">
+                    <span class="arch-chip">📡 useApi Custom Hook</span>
+                    <span class="arch-chip">📮 All POST Requests</span>
+                    <span class="arch-chip">🏫 BS-SchoolCode Header</span>
+                    <span class="arch-chip">🔑 BS-AuthorizationToken</span>
+                </div>
+            </div>
+            <div class="arch-arrow">▼ ▼ ▼</div>
+            <div class="arch-layer layer-backend">
+                <div>
+                    <div class="layer-title">Backend Server</div>
+                    <div style="font-size: 12px; color: #64748b; margin-top: 4px;">Cloud API Infrastructure</div>
+                </div>
+                <div class="layer-content">
+                    <span class="arch-chip">☁️ Cloud-Hosted API</span>
+                    <span class="arch-chip">🏗️ Multi-School Tenancy</span>
+                    <span class="arch-chip">🗄️ Centralized Database</span>
+                    <span class="arch-chip">🔒 Secure Authentication</span>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">08 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 9: SMART FEATURES ==================== -->
+    <div class="slide slide-features">
+        <div class="slide-header">
+            <div class="eyebrow">What Makes Us Different</div>
+            <h2 style="color: #f1f5f9;">Smart <span style="color: #a78bfa;">Features</span> That Set Us Apart</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fc-blue">
+                <div class="f-icon">🎨</div>
+                <h4>Dynamic Theming</h4>
+                <p>Every school gets its own brand colors, dark/light mode, custom fonts, and print-specific styling. Fully white-labeled.</p>
+            </div>
+            <div class="feature-card fc-green">
+                <div class="f-icon">📱</div>
+                <h4>Fully Responsive</h4>
+                <p>Seamless experience on desktop, tablet, and mobile. Collapsible sidebar, adaptive layouts, and touch-friendly UI.</p>
+            </div>
+            <div class="feature-card fc-purple">
+                <div class="f-icon">🔐</div>
+                <h4>Role-Based Access</h4>
+                <p>Admin, Teacher, Accountant — each role sees only what they need. Protected routes with session-based auth and auto-logout.</p>
+            </div>
+            <div class="feature-card fc-orange">
+                <div class="f-icon">🖨️</div>
+                <h4>Advanced Printing</h4>
+                <p>React-to-Print integration with theme-aware layouts. Professional receipts, report cards, and attendance sheets — one click.</p>
+            </div>
+            <div class="feature-card fc-red">
+                <div class="f-icon">📊</div>
+                <h4>Data Visualization</h4>
+                <p>Interactive Recharts dashboards showing collection trends, attendance patterns, and academic analytics with real-time data.</p>
+            </div>
+            <div class="feature-card fc-cyan">
+                <div class="f-icon">🧩</div>
+                <h4>Modular Architecture</h4>
+                <p>Plug-and-play module system. Each dashboard is independent yet interconnected. Add new modules without breaking existing ones.</p>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">09 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 10: COMPETITIVE ADVANTAGE ==================== -->
+    <div class="slide slide-compare">
+        <div class="slide-header">
+            <div class="eyebrow">Why Choose Us</div>
+            <h2 style="color: #f1f5f9;">Competitive <span style="color: #60a5fa;">Advantage</span></h2>
+        </div>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>❌ Other School Software</th>
+                    <th>✅ SCHOOL ZEN AI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Technology Stack</td>
+                    <td>Outdated — jQuery, PHP, or desktop-only</td>
+                    <td>React 19 + Vite + Material-UI (Cutting Edge)</td>
+                </tr>
+                <tr>
+                    <td>Setup Time</td>
+                    <td>Days or weeks of configuration</td>
+                    <td>Minutes — Master Config gets you started fast</td>
+                </tr>
+                <tr>
+                    <td>Multi-School Support</td>
+                    <td>Separate installation for each school</td>
+                    <td>Built-in multi-tenancy via SchoolCode</td>
+                </tr>
+                <tr>
+                    <td>Custom Branding</td>
+                    <td>Fixed colors and layout</td>
+                    <td>Full theme customization — colors, fonts, logos</td>
+                </tr>
+                <tr>
+                    <td>Mobile Experience</td>
+                    <td>Limited or no mobile support</td>
+                    <td>Fully responsive — works on any device</td>
+                </tr>
+                <tr>
+                    <td>Print Quality</td>
+                    <td>Basic HTML print</td>
+                    <td>Professional themed prints with React-to-Print</td>
+                </tr>
+                <tr>
+                    <td>UI/UX Quality</td>
+                    <td>Dated interface, poor usability</td>
+                    <td>Modern animated UI with Framer Motion</td>
+                </tr>
+                <tr>
+                    <td>Performance</td>
+                    <td>Slow page loads, full refresh</td>
+                    <td>Vite-powered SPA — instant navigation</td>
+                </tr>
+            </tbody>
+        </table>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">10 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 11: WHO BENEFITS ==================== -->
+    <div class="slide slide-benefits">
+        <div class="slide-header">
+            <div class="eyebrow">Impact & Value</div>
+            <h2 style="color: #f1f5f9;">Who <span style="color: #34d399;">Benefits</span> From This System?</h2>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="b-icon" style="background: rgba(59,130,246,0.1); color: #60a5fa; font-size: 28px;">👨‍💼</div>
+                <div>
+                    <h3>School Principal / Director</h3>
+                    <p>Complete school overview on a single dashboard. Real-time data-driven decision making. Monitor collections, attendance, and academic performance without chasing files.</p>
+                    <div class="benefit-features">
+                        <span class="bf-tag">Real-time KPIs</span>
+                        <span class="bf-tag">Visual Analytics</span>
+                        <span class="bf-tag">Instant Reports</span>
+                    </div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="b-icon" style="background: rgba(139,92,246,0.1); color: #a78bfa; font-size: 28px;">👩‍🏫</div>
+                <div>
+                    <h3>Teachers</h3>
+                    <p>Quick digital attendance marking replaces time-consuming paper registers. Easy mark entry with automatic result computation saves hours of manual calculation work.</p>
+                    <div class="benefit-features">
+                        <span class="bf-tag">Quick Attendance</span>
+                        <span class="bf-tag">Easy Mark Entry</span>
+                        <span class="bf-tag">Auto Results</span>
+                    </div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="b-icon" style="background: rgba(16,185,129,0.1); color: #34d399; font-size: 28px;">💼</div>
+                <div>
+                    <h3>School Accountant</h3>
+                    <p>Streamlined fee collection with instant receipt generation. Automatic dues tracking eliminates manual fee register maintenance. Financial reports generated in seconds.</p>
+                    <div class="benefit-features">
+                        <span class="bf-tag">Fee Collection</span>
+                        <span class="bf-tag">Auto Dues</span>
+                        <span class="bf-tag">Financial Reports</span>
+                    </div>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="b-icon" style="background: rgba(245,158,11,0.1); color: #fbbf24; font-size: 28px;">👨‍👩‍👧</div>
+                <div>
+                    <h3>Overall School Efficiency</h3>
+                    <p>Eliminates paper waste, reduces human error, speeds up every administrative process. The school operates smarter, faster, and more transparently — setting it apart from competition.</p>
+                    <div class="benefit-features">
+                        <span class="bf-tag">Zero Paper Waste</span>
+                        <span class="bf-tag">Faster Operations</span>
+                        <span class="bf-tag">Transparency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">11 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 12: ROADMAP ==================== -->
+    <div class="slide slide-roadmap">
+        <div class="slide-header">
+            <div class="eyebrow">Growth Vision</div>
+            <h2 style="color: #f1f5f9;">Future <span style="color: #a78bfa;">Roadmap</span> — Architecture Ready</h2>
+        </div>
+        <div class="roadmap-timeline">
+            <div class="roadmap-phase phase-1">
+                <div class="phase-label">Phase 1 — Current</div>
+                <h4>Core Modules</h4>
+                <ul>
+                    <li>Admin Dashboard</li>
+                    <li>Fee Collection</li>
+                    <li>Attendance System</li>
+                    <li>Exam Management</li>
+                    <li>Report Generation</li>
+                    <li>Master Configuration</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase phase-2">
+                <div class="phase-label">Phase 2 — Next</div>
+                <h4>Communication</h4>
+                <ul>
+                    <li>SMS Notifications</li>
+                    <li>WhatsApp Alerts</li>
+                    <li>Parent Mobile App</li>
+                    <li>Fee Payment Links</li>
+                    <li>Absentee Auto-Alerts</li>
+                    <li>Result Notifications</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase phase-3">
+                <div class="phase-label">Phase 3 — Growth</div>
+                <h4>Extended Modules</h4>
+                <ul>
+                    <li>Transport Management</li>
+                    <li>Library System</li>
+                    <li>Timetable Builder</li>
+                    <li>Hostel Management</li>
+                    <li>Inventory Tracking</li>
+                    <li>HR & Payroll</li>
+                </ul>
+            </div>
+            <div class="roadmap-phase phase-4">
+                <div class="phase-label">Phase 4 — Innovation</div>
+                <h4>AI & Intelligence</h4>
+                <ul>
+                    <li>AI Performance Predictor</li>
+                    <li>Smart Fee Reminders</li>
+                    <li>Attendance Pattern AI</li>
+                    <li>Multi-Language Support</li>
+                    <li>Advanced Analytics</li>
+                    <li>Online Exam Portal</li>
+                </ul>
+            </div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">12 / 13</span>
+    </div>
+
+    <!-- ==================== SLIDE 13: CLOSING / CTA ==================== -->
+    <div class="slide slide-cta">
+        <div class="bg-glow"></div>
+        <div class="cta-content">
+            <h2>Ready to Transform<br>School <span>Management?</span></h2>
+            <p class="tagline">One Platform. Every Module. Complete Control.</p>
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <span class="dot"></span>
+                    One Unified Dashboard
+                </div>
+                <div class="cta-feature">
+                    <span class="dot"></span>
+                    Modern & Responsive
+                </div>
+                <div class="cta-feature">
+                    <span class="dot"></span>
+                    Customizable Per School
+                </div>
+                <div class="cta-feature">
+                    <span class="dot"></span>
+                    Scalable Architecture
+                </div>
+                <div class="cta-feature">
+                    <span class="dot"></span>
+                    Professional Prints
+                </div>
+                <div class="cta-feature">
+                    <span class="dot"></span>
+                    Real-Time Analytics
+                </div>
+            </div>
+            <div class="cta-btn">Let's Get Started →</div>
+        </div>
+        <span class="slide-logo">SCHOOL ZEN AI</span>
+        <span class="page-num">13 / 13</span>
+    </div>
+
+</body>
+</html>
